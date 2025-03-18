@@ -1,0 +1,1 @@
+// This file exists so that the VSCode Tailwind CSS IntelliSense extension can provide suggestions for Tailwind CSS classes in the editor.
