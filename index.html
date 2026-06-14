@@ -6,98 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shelby Speegle</title>
 
+  <!-- Font -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+
   <!-- Tailwind -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   <style>
-    /* Color variables */
-    :root {
-      --bg-color: #000000;
-      --fg-color: #f5f5f5;
-      --accent-color: #ffffff;
+    @keyframes slam {
+      0% {
+        opacity: 0;
+        transform: translate(-8px, -8px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    .animate-slam {
+      animation: slam 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      background-color: var(--bg-color);
-
-      font-family: 'MonaspaceArgon-Regular';
-      color: var(--fg-color);
-      line-height: 1.3rem;
-    }
-
-    a {
-      padding: 10px;
-      color: var(--accent-color);
-      text-decoration: none;
-      /* transition-property: background-color; */
-      /* transition-timing-function: cubic-bezier(.4, 0, .2, 1); */
-      /* transition-duration: .15s; */
-    }
-
-    a:hover {
-      text-decoration: underline;
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-
-    body {
-      border: 1px solid var(--fg-color);
-    }
-
-    header {
-      margin-top: -10px;
+      font-family: "Hack", sans-serif;
+      background-color: #0a0a0a;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.10) 0.5px, transparent 1px);
+      background-size: 14px 14px;
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
 
-<body class="w-[600px] p-5 m-5 text-sm">
-  <header class="flex w-full items-center justify-between">
-    <a href="/index.html" class="text-lg">Shelby Speegle</a>
-    <nav>
-      <a href="https://github.com/shelbyspeegle" class="flex items-center gap-1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-code">
-          <polyline points="16 18 22 12 16 6" />
-          <polyline points="8 6 2 12 8 18" />
+<body class="flex min-h-screen items-center justify-center text-white/90 tracking-tight p-5 uppercase">
+  <main
+    class="animate-slam w-full max-w-[330px] border-4 border-[#E7638A] bg-[#0a0a0a] shadow-[10px_10px_0_0_rgba(255,255,255,0.30)]">
+
+    <!-- Hero image -->
+    <div class="aspect-square w-full overflow-hidden border-b-4 border-[#E7638A]">
+      <img class="size-full object-cover grayscale contrast-125"
+        src="https://avatars.githubusercontent.com/u/7694692?v=4" alt="My Profile Picture">
+    </div>
+
+    <!-- Identity -->
+    <div class="px-6 py-6">
+      <h1 class="text-3xl font-black leading-none text-white/90">Shelby Speegle</h1>
+      <p class="mt-3 text-xs font-bold text-[#E7638A]">Platform Engineering @ IdeaRoom</p>
+      <p class="mt-1.5 text-xs font-bold text-white/30">Prev. dataviz @ Tesla</p>
+    </div>
+
+    <!-- Link -->
+    <nav class="border-t-4 border-[#E7638A]">
+      <a href="https://github.com/shelbyspeegle"
+        class="flex items-center justify-center gap-3 bg-[#E7638A] px-5 py-5 text-black no-underline font-black transition-colors duration-150 hover:bg-white/90">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+          <path d="M9 18c-4.51 2-5-2-7-2" />
         </svg>
         GitHub
+        <span>&rarr;</span>
       </a>
     </nav>
-  </header>
-  <div class="flex flex-row items-center gap-[30px] p-[10px]">
-    <div class="size-[120px] rounded-full flex-shrink-0 overflow-hidden bg-(--fg-color)">
-      <img class="size-full" src="https://avatars.githubusercontent.com/u/7694692?v=4" alt="My Profile Picture">
-    </div>
-
-    <div class="flex flex-col gap-5">
-      <p>
-        I am a developer and creator based in Boise, Idaho. I am passionate about building tools that help people and
-        make the world a better place.
-      </p>
-      <!-- <p>
-        -----------------------------
-        //
-        >_
-      </p> -->
-    </div>
-  </div>
-
-  <!-- <div class="projects">
-        <h2>Projects</h2>
-        <a href="#">Project 1</a>
-        <a href="#">Project 2</a>
-        <a href="#">Project 3</a>
-    </div> -->
-
-  <!-- <div class="blog">
-        <h2>Blog</h2>
-        <a href="/blog/post1.html">Post 1</a>
-        <a href="/blog/post2.html">Post 2</a>
-    </div> -->
+  </main>
 </body>
 
 </html>
